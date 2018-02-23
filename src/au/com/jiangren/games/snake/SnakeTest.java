@@ -12,6 +12,7 @@ public class SnakeTest {
     Snake snake = new Snake(Direction.RIGHT.point2D);
 
     @Test
+
     public void testIsDead() {
 
         System.out.println(snake.isDead());

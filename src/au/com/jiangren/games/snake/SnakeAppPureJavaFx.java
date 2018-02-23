@@ -54,8 +54,11 @@ public class SnakeAppPureJavaFx extends Application {
                     game.update();
 
                     if (game.isOver()) {
+                        //TODO reset the ganem
                         showMessageBox("Game over", "Oops, your game is over!");
                         this.stop();
+                        //resetGame();
+                        //this.start();
                     }
 
                     render(gc);
@@ -83,6 +86,10 @@ public class SnakeAppPureJavaFx extends Application {
         g.fillRect(game.getFood().getPosition().getX() * TILE_SIZE, game.getFood().getPosition().getY() * TILE_SIZE, TILE_SIZE, TILE_SIZE);
     }
 
+
+    private void resetGame(){
+        this.game= new Game(this.GAME_SIZE);
+    }
     private void showMessageBox(String title, String message) {
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);

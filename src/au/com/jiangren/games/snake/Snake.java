@@ -20,11 +20,12 @@ public class Snake {
         this.head = head;
         this.previousTail = head;
         body.add(head);
-        /*
-        for (int i = 0 ; i < 8; i++) {
+
+
+        for (int i = 0 ; i < 15; i++) {
             body.add(head.add(Direction.LEFT.point2D));
         }
-        */
+
 
 
     }
